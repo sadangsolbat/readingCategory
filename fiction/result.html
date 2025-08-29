@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 독서 취향 테스트 - 결과</title>
+  
+  <link rel="stylesheet" href="style_fiction.css"> 
+  
+  <script src="script_fiction.js"></script>
+  <style>
+    /* 버튼을 중앙에 배치하기 위한 스타일 */
+    .button-center-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body onload="loadResult()">
+
+  <div class="result-container" style="padding-top: 30px; margin-top: 30px;">
+    
+    <h2 class="result-heading">당신의 독서 유형은?</h2>
+    
+    <div class="info-box">
+      <div class="result-title">
+        <span id="result-name"></span> (<span id="result-type"></span>)
+      </div>
+      
+      <p id="result-description" class="result-description"></p>
+    </div>
+
+    <h2 class="result-heading">📚 추천 도서</h2>
+
+    <div class="info-box">
+      <p class="book-recommendation">
+        <strong>현대:</strong> <span id="recommend-modern"></span>
+      </p>
+      <p class="book-recommendation">
+        <strong>고전:</strong> <span id="recommend-classic"></span>
+      </p>
+    </div>
+    
+    <div class="button-center-wrapper">
+      <button class="start-button" onclick="onStart(); window.location.href='index.html';">
+        <span class="icon">👉</span> 다시 테스트하기
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 사당솔밭도서관 독서 취향 테스트 - 논픽션편</title>
+  <script src="script_nonFiction.js"></script>
+  
+  <style>
+body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px; /* 패딩값 축소 */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.main-container {
+    width: 95%; /* 폭 증가 */
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* 간격 축소 */
+}
+
+.title-box {
+    background-color: #ecbed6;
+    border-radius: 20px; /* 반경 축소 */
+    padding: 15px 20px; /* 패딩 축소 */
+    text-align: center;
+    font-size: 1.2em; /* 폰트 크기 축소 */
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: keep-all; /* 단어 분리 방지 */
+}
+
+.intro-box {
+    background-color: #ecbed6;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1em; /* 폰트 크기 축소 */
+    line-height: 1.6;
+    color: #333;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: keep-all; /* 단어 분리 방지 */
+}
+
+.start-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px; /* 패딩 축소 */
+    font-size: 1.1em; /* 폰트 크기 축소 */
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; /* 상하 여백 추가 */
+}
+
+.start-button:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+/* 모바일 디바이스를 위한 미디어 쿼리 추가 */
+@media screen and (max-width: 480px) {
+    .title-box {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+    
+    .intro-box {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+    
+    .start-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+</style>
+
+</head>
+<body>
+  <div class="main-container">
+    <div class="title-box">
+      <span class="icon">📚</span> 사당솔밭도서관 독서 취향 테스트 - 논픽션편
+    </div>
+
+    <div class="intro-box">책은 모두에게 열려 있지만, 각자가 빠져드는 지점은 다릅니다.
+
+어떤 이는 데이터를 통해 세상을 이해하고,
+어떤 이는 사람들의 이야기에 귀 기울이며,
+또 어떤 이는 오래된 사상의 맥락 속에서 길을 찾습니다.
+당신이 책을 고르는 순간, 드러나는 것은 단순한 취향이 아니라 세상을 바라보는 관점입니다.
+
+24가지 간단한 문항에 답하면,
+논픽션을 읽을 때 당신의 독서 성향을 8가지 유형 중 하나로 알려드릴게요.
+유형에 맞는 사당솔밭도서관 추천도서도 받아가시고,
+해당 유형에 맞는 책갈피도 가져가세요.</div>
+
+    <button class="start-button" onclick="onStart(); window.location.href='question.html';">
+      <span class="icon">👉</span> 테스트 시작하기
+    </button>
+  </div>
+</body>
+</html>
+

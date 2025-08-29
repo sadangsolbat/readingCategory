@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>질문</title>
+  <script src="script_fiction.js"></script>
+  
+  <link rel="stylesheet" href="style_fiction.css">
+</head>
+<body onload="loadQuestion()">
+
+  <div id="question-text">질문이 여기에 표시됩니다</div>
+
+  <div class="selection-container">
+    <div class="radio-group">
+      <label class="option">
+        <input type="radio" name="rating" value="-2">
+        <span class="option-label">매우 그렇지 않다</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="rating" value="-1">
+        <span class="option-label">그렇지 않다</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="rating" value="0">
+        <span class="option-label">보통이다</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="rating" value="1">
+        <span class="option-label">그렇다</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="rating" value="2">
+        <span class="option-label">매우 그렇다</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button id="back-button" onclick="onBack()">이전</button>
+    <button onclick="onNext();">다음</button>
+  </div>
+
+  <script>
+    // 질문 첫 번째일 경우 back 버튼 숨기기
+    setInterval(() => {
+      const backBtn = document.getElementById("back-button");
+      const phase = JSON.parse(sessionStorage.getItem('phase'));
+      const questionIndex = JSON.parse(sessionStorage.getItem('questionIndex'));
+
+      if (phase === 0 && questionIndex === 0) {
+        backBtn.style.display = "none";
+      } else {
+        backBtn.style.display = "inline-block"; // 'inline' 대신 'inline-block'으로 변경
+      }
+    }, 100);
+  </script>
+</body>
+</html>
