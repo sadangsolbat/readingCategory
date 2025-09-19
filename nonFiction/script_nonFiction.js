@@ -195,6 +195,9 @@ function loadResult() {
   document.getElementById("result-type").textContent = resultString;
   document.getElementById("result-name").textContent = resultData.name;
   document.getElementById("result-description").textContent = resultData.desc;
-  document.getElementById("recommend-books").textContent = resultData.books;
+  const booksElem = document.getElementById("recommend-books");
+if (booksElem) {
+  const list = Array.isArray(resultData.books) ? resultData.books.join(", ") : resultData.books;
+  booksElem.textContent = list || "";  // 비어있을 때 대비
   console.log('loadQuestion called. session question:', JSON.parse(sessionStorage.getItem('question')));    
 }
