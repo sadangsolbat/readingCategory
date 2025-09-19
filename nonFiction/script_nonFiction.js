@@ -195,7 +195,6 @@ function loadResult() {
   document.getElementById("result-type").textContent = resultString;
   document.getElementById("result-name").textContent = resultData.name;
   document.getElementById("result-description").textContent = resultData.desc;
-  document.getElementById("recommend-modern").textContent = resultData.modern;
-  document.getElementById("recommend-classic").textContent = resultData.classic;
+  document.getElementById("recommend-books").textContent = resultData.books;
   console.log('loadQuestion called. session question:', JSON.parse(sessionStorage.getItem('question')));    
 }
