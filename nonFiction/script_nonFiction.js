@@ -195,9 +195,20 @@ function loadResult() {
   document.getElementById("result-type").textContent = resultString;
   document.getElementById("result-name").textContent = resultData.name;
   document.getElementById("result-description").textContent = resultData.desc;
-  const booksElem = document.getElementById("recommend-books");
-if (booksElem) {
-  const list = Array.isArray(resultData.books) ? resultData.books.join(", ") : resultData.books;
-  booksElem.textContent = list || "";  // 비어있을 때 대비
-  console.log('loadQuestion called. session question:', JSON.parse(sessionStorage.getItem('question')));    
+ const booksElem = document.getElementById("recommend-books");
+  if (booksElem) {
+    const list = Array.isArray(resultData.books)
+      ? resultData.books.join(", ")
+      : (resultData.books || "");
+    booksElem.textContent = list;
+  }
+
+  console.log('loadResult done:', resultString);
 }
+
+// 전역 바인딩(HTML onclick/onload에서 접근 가능하도록)
+window.onStart = onStart;
+window.onNext = onNext;
+window.onBack = onBack;
+window.loadQuestion = loadQuestion;
+window.loadResult = loadResult;
